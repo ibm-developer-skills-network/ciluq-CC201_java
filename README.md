@@ -1,10 +1,10 @@
 # Spring Boot Hello World for OpenShift
 
-A simple Spring Boot application with a hello world endpoint, built with Maven and JDK 21, designed for deployment to OpenShift using Source-to-Image (S2I).
+A simple Spring Boot application with a hello world endpoint, built with Maven and JDK 17, designed for deployment to OpenShift using Source-to-Image (S2I).
 
 ## Prerequisites
 
-- JDK 21
+- JDK 17
 - Maven 3.8+
 - OpenShift CLI (oc)
 
@@ -43,7 +43,7 @@ oc new-project hello-openshift
 3. Create a new application using S2I:
 
 ```bash
-oc new-app --name=hello-openshift java:21~https://your-git-repo-url --context-dir=/ --strategy=source
+oc new-app --name=hello-openshift java:17~https://your-git-repo-url --context-dir=/ --strategy=source
 ```
 
 4. Expose the service to create a route:
